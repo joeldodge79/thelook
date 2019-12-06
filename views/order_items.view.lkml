@@ -36,6 +36,7 @@ view: order_items {
 
   dimension: sale_price {
     type: number
+    suggestions: ["what is a suggestion", "another suggestion"]
     sql: ${TABLE}.sale_price ;;
   }
 

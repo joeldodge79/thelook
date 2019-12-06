@@ -13,6 +13,12 @@ view: users {
     sql: ${TABLE}.age ;;
   }
 
+  filter: user_age {
+    type: number
+    suggest_dimension: age
+    sql: {% condition %} ${age} {% endcondition %};;
+  }
+
   dimension: city {
     type: string
     sql: ${TABLE}.city ;;
